@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    
+}
+
+
+.login{
+    background-color: #FAFAFA;
+    width: 80vh;
+    height: 100vh;
+    }
+
+.oj{
+    background-color: red;
+    width: 120vh;
+    /* height: 50vh; */
+}
+
+.head{
+    display: flex;
+    flex-direction: "column";
+}
+
+.field{
+    width: 80%;
+  padding: 12px 20px;
+  margin-top: 40px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+  margin-left: 50px;
+    
+}
