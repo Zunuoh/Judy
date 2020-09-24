@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Login from '../src/components/Login'
+import HomeScreen from '../src/components/HomeScreen'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // function App() {
 //   return (
@@ -25,6 +27,7 @@ import Login from '../src/components/Login'
     const App=()=>{
       return(
       <Login/>
+      // <HomeScreen/>
       )
     }
     

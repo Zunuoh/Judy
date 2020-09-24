@@ -2,24 +2,24 @@ body{
     margin: 0;
     
 }
-
+.container{
+    max-width: 100%
+}
 
 .login{
     background-color: #FAFAFA;
-    width: 80vh;
-    height: 100vh;
+    height: 100vh; 
     }
 
 .oj{
-    background-color: red;
-    width: 120vh;
-    /* height: 50vh; */
+    background-color:#313F52;
+    height: 100vh;
 }
 
-.head{
+/* .head{
     display: flex;
     flex-direction: "column";
-}
+} */
 
 .field{
     width: 80%;
@@ -27,7 +27,16 @@ body{
   margin-top: 40px;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #F5F5F5;
   margin-left: 50px;
     
+}
+
+.button{
+    width:80%;
+    height: 70px;
+    display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+    ;
 }
