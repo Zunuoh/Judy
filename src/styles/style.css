@@ -16,11 +16,6 @@ body{
     height: 100vh;
 }
 
-/* .head{
-    display: flex;
-    flex-direction: "column";
-} */
-
 .field{
     width: 80%;
   padding: 12px 20px;
@@ -39,4 +34,21 @@ body{
     margin-left: 50px;
     margin-top: 50px;
     ;
+}
+
+.row1{
+    /* background-color: yellow; */
+    height: 92.8vh; 
+    /* padding: 40px; */
+   
+}
+
+.row2{
+    /* background-color: red; */
+    height: 92.8vh; 
+}
+
+.row3{
+    /* background-color: blueviolet; */
+    height: 92.8vh; 
 }

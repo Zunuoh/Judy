@@ -26,8 +26,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
     const App=()=>{
       return(
-      <Login/>
-      // <HomeScreen/>
+      // <Login/>
+      <HomeScreen/>
       )
     }
     
