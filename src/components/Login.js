@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Container, Row, Col, Button} from 'react-bootstrap';
+import {Container, Row, Col, Button} from 'react-bootstrap';
 import '../styles/style.css';
 import { Facebook, Twitter, Instagram } from 'react-feather';
 

@@ -52,3 +52,29 @@ body{
     /* background-color: blueviolet; */
     height: 92.8vh; 
 }
+
+.chart{
+    display: "flex";
+    justify-content: center;
+    width: 720px;
+    background-color: brown;
+   
+}
+
+
+.chartRow1{
+    height: 100vh;
+    background-color: #F4F4F4;
+}
+
+.invoices{
+    display: flex;
+    flex-direction: column;
+}
+
+.pie{
+    display: "flex";
+    justify-content: center;
+    width: 720px;
+    padding-left: 750px;
+}

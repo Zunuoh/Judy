@@ -2,22 +2,14 @@ import React from 'react';
 import {Card, Container, Row, Col, Button} from 'react-bootstrap';
 import '../styles/style.css';
 import { Grid, Bell, User } from 'react-feather';
+import Header from './Header';
+
 
 
 const HomeScreen = ()=>{
     return(
       <div>
-      <div style={{display:"flex",flexDirection:"row", backgroundColor:"violet", height:70, alignItems:"center", paddingLeft:20}}>
-        <div style={{width:40, height:40, backgroundColor:"turquoise", borderWidth:1, borderRadius:20}}/>
-        <div style={{paddingLeft:20}}>Judy</div>
-        <input type="text" className="field" placeholder="Search..." style={{marginTop:2, marginLeft:"18%",width:"50%", borderRadius:5}}/>
-        <Bell color="black" size={24} style={{marginLeft:150}}/>
-        <Grid color="black" size={24} style={{marginLeft:20}}/>
-       <div style={{marginLeft:30}}>Abigail Bobson</div>
-       <div style={{width:40, height:40, backgroundColor:"red", display:"flex", justifyContent:"center", alignItems:"center", borderRadius:30, marginLeft:40}}>
-         <span>AB</span>
-       </div>
-      </div>
+      <Header/>
 
       <Container>
       <Row>
@@ -45,7 +37,7 @@ const HomeScreen = ()=>{
     <div style={{width:"70%", height:"20%",marginTop:170, marginLeft:30, display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
     <User color="black" size={60} />
     <span style={{fontSize:22, paddingTop:5}}>Practice Managment</span>
-    {/* <span style={{fontSize:22}}> Module</span> */}
+    <span style={{fontSize:22}}> Module</span>
     </div>
 
     <div style={{width:"70%", height:"20%",marginTop:50, marginLeft:30 , display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>

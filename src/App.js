@@ -4,6 +4,10 @@ import './App.css';
 import Login from '../src/components/Login'
 import HomeScreen from '../src/components/HomeScreen'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Calendar } from 'react-feather';
+import LineChart from '../src/components/LineChart'
+import PieScreen from './components/PieScreen'
+import InvoiceScreen from '../src/components/InvoiceScreen';
 
 // function App() {
 //   return (
@@ -27,7 +31,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
     const App=()=>{
       return(
       // <Login/>
-      <HomeScreen/>
+      // <HomeScreen/>
+      // <PieScreen/>
+      // <LineChart/>
+      <InvoiceScreen/>
       )
     }
     
