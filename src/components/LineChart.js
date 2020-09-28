@@ -31,7 +31,7 @@ const LineChart = ()=>{
   
     return(
         <div>
-            <div className='chart'>
+            <div>
             <Line data={data}/>
             </div>
         </div>      

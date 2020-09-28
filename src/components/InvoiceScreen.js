@@ -6,8 +6,8 @@ import PieScreen from '../components/PieScreen'
 import LineChart from './LineChart';
 import '../styles/style.css';
 
-const invoiceList = [{"id":"0", "name":"Total Revenue", "amt":"$3,507.76", "info":"$300.76  last days"},  {"id":"0", "name":"Average Invoice", "amt":"$3,507.76", "info":"$300.76  last days"},
-{"id":"0", "name":"Total Revenue", "amt":"$3,507.76", "info":"$300.76  last days"}, {"id":"0", "name":"Average Invoice", "amt":"$3,507.76", "info":"$300.76  last days"}]
+const invoiceList = [{"id":"0", "name":"Total Revenue", "amt":"$3,507.76", "info":"$300.76  last 30 days"},  {"id":"1", "name":"Average Invoice", "amt":"$3,507.76", "info":"$300.76  last 30 days"},
+{"id":"2", "name":"Total Revenue", "amt":"$3,507.76", "info":"$300.76  last 30 days"}, {"id":"3", "name":"Average Invoice", "amt":"$3,507.76", "info":"$300.76  last 30 days"}]
 
 
 const InvoiceScreen = ()=>{
@@ -32,42 +32,31 @@ const InvoiceScreen = ()=>{
 
                <div style={{paddingTop:30, fontSize:20, paddingLeft:20}}>Invoice Summary</div>
 
-                <div style={{display:"flex", flexDirection:"row"}}> 
-                    <div style={{ width:"20%", height:"30%",backgroundColor:"blue", marginTop:30, marginLeft:30, paddingLeft:20}}>
-                    <div style={{paddingTop:30}}>Total Revenue</div>
-                    <div style={{paddingTop:20, fontSize:30}}>fjff</div>
-                    <div style={{paddingTop:20}}>jkfm,d</div>
-                    </div>
-                    
-                    
-                    <div style={{ width:"20%", height:"30%",backgroundColor:"blue", marginTop:30, marginLeft:30, paddingLeft:20}}>
-                    <div style={{paddingTop:30}}>Total Revenue</div>
-                    <div style={{paddingTop:20, fontSize:30}}>fjff</div>
-                    <div style={{paddingTop:20}}>jkfm,d</div>
-                    </div>
-
-                    <div style={{ width:"20%", height:"30%",backgroundColor:"blue", marginTop:30, marginLeft:30, paddingLeft:20}}>
-                    <div style={{paddingTop:30}}>Total Revenue</div>
-                    <div style={{paddingTop:20, fontSize:30}}>fjff</div>
-                    <div style={{paddingTop:20}}>jkfm,d</div>
-                    </div>
-
-                    <div style={{ width:"20%", height:"30%",backgroundColor:"blue", marginTop:30, marginLeft:30, paddingLeft:20}}>
-                    <div style={{paddingTop:30}}>Total Revenue</div>
-                    <div style={{paddingTop:20, fontSize:30}}>fjff</div>
-                    <div style={{paddingTop:20}}>jkfm,d</div>
-                    </div>
-
-                    
+                <div style={{display:"flex", flexDirection:"row", height:"22%"}}> 
+                {invoices && invoices.map(invoice=>{
+                    return(
+                        <div style={{backgroundColor:"#F8F7F8", marginTop:30, marginLeft:30, paddingLeft:20, width:"22%", borderWidth:2}}>
+                        <div style={{paddingTop:30}}>{invoice.name}</div>
+                        <div style={{paddingTop:10, fontSize:30}}>{invoice.amt}</div>
+                        <div style={{paddingTop:20, color:"#A5C6A9"}}>{invoice.info}</div>
+                        </div>
+                    );
+                })} 
                 </div>
 
 
         
-         <div style={{paddingTop:60, backgroundColor:"blue", height:"50%", width:"55%", marginTop:40, paddingLeft:40}}>
-         <LineChart/>
-         </div>
-          
-           <PieScreen/> 
+        <div style={{display:"flex", flexDirection:"row"}}>
+        <div className='chart'>
+            <LineChart/>
+        </div>
+      
+      <div style={{backgroundColor:"red", width:"30%", marginTop:81, height:"80%", marginLeft:80, paddingLeft:30, paddingTop:60, paddingBottom:60, display:"flex", flex:2}}>
+      <PieScreen/> 
+      </div>
+       
+        </div>
+        
                
                
                
