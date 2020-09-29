@@ -2,32 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Login from '../src/components/Login'
-import HomeScreen from '../src/components/HomeScreen'
+import HomeScreen from '../src/components/HomeScreen';
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Calendar } from 'react-feather';
 import LineChart from '../src/components/LineChart'
 import PieScreen from './components/PieScreen'
 import InvoiceScreen from '../src/components/InvoiceScreen';
+import CalendarScreen from '../src/components/CalendarScreen';
+import ChartScreen from '../src/components/Chart';
 
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
 
     const App=()=>{
       return(
@@ -36,6 +21,9 @@ import InvoiceScreen from '../src/components/InvoiceScreen';
       // <PieScreen/>
       // <LineChart/>
       <InvoiceScreen/>
+      // <CalendarScreen/>
+      // <ChartScreen/>
+     
       )
     }
     

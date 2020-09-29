@@ -13,18 +13,19 @@ const PieScreen =()=>{
                label:"Total Revenue",
                data:[
                    4,1,2,4,6
-               ]
+               ],
+               backgroundColor : ["green", "red", "brown", "blue", "black"]
             }
        ]
    }
 
 
     return(
-        // <div className="pie">
+         <div className="pie">
            
             <Pie data={pieData} />
            
-        // </div>
+             </div>
     );
 }
 
