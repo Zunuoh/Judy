@@ -1,32 +1,84 @@
-import React from 'react';
-import {Pie} from 'react-chartjs-2';
+import React, { PureComponent } from 'react';
+import {
+  PieChart, Pie, Sector, Cell,
+} from 'recharts';
 import '../styles/style.css';
 
 
-const PieScreen =()=>{
-   const pieData = {
-       labels:[
-           'Jan', 'Feb', 'Mar', 'Apr', 'May'
-       ],
-       datasets:[
-           {
-               label:"Total Revenue",
-               data:[
-                   4,1,2,4,6
-               ],
-               backgroundColor : ["green", "red", "brown", "blue", "black"]
-            }
-       ]
-   }
+// const PieScreen =()=>{
+//    const pieData = {
+//        labels:[
+//            'Jan', 'Feb', 'Mar', 'Apr', 'May'
+//        ],
+//        datasets:[
+//            {
+//                label:"Total Revenue",
+//                data:[
+//                    4,1,2,4,6
+//                ],
+//                backgroundColor : ["green", "red", "brown", "blue", "black"]
+//             }
+//        ]
+//    }
 
 
-    return(
-         <div className="pie">
+//     return(
+//          <div className="pie">
            
-            <Pie data={pieData} />
+//             <Pie data={pieData} />
            
-             </div>
+//              </div>
+//     );
+// }
+
+// export default PieScreen;
+
+const data = [
+    { name: 'Group A', value: 400 },
+    { name: 'Group B', value: 300 },
+    { name: 'Group C', value: 300 },
+    { name: 'Group D', value: 200 },
+  ];
+  
+  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+  
+  const RADIAN = Math.PI / 180;
+  const renderCustomizedLabel = ({
+    cx, cy, midAngle, innerRadius, outerRadius, percent, index,
+  }) => {
+     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+  
+    return (
+      <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
     );
-}
-
-export default PieScreen;
+  };
+  
+  export default class Example extends PureComponent {
+    static jsfiddleUrl = 'https://jsfiddle.net/alidingling/c9pL8k61/';
+  
+    render() {
+      return (
+        <PieChart width={500} height={500} className="pie" >
+          <Pie
+            data={data}
+            cx={200}
+            cy={200}
+            labelLine={false}
+            label={renderCustomizedLabel}
+            outerRadius={120}
+            fill="#8884d8"
+            dataKey="value"
+          >
+            {
+              data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
+            }
+          </Pie>
+        </PieChart>
+      );
+    }
+  }
+  

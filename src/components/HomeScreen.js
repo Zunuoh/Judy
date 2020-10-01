@@ -3,7 +3,7 @@ import {Card, Container, Row, Col, Button} from 'react-bootstrap';
 import '../styles/style.css';
 import { Grid, Bell, User } from 'react-feather';
 import Header from './Header';
-
+import {Link} from 'react-router-dom';
 
 
 const HomeScreen = ()=>{
@@ -19,12 +19,17 @@ const HomeScreen = ()=>{
     <span style={{fontSize:22, paddingTop:5}}>Profile Managment</span>
     <span style={{fontSize:22}}> Module</span>
     </div>
-
+    
+   
     <div style={{width:"70%", height:"20%",marginTop:50, marginLeft:30 , display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
+    <Link to="/third">
     <User color="black" size={60} />
+    </Link>
     <span style={{fontSize:22, paddingTop:5}}>Invoices</span>
     {/* <span style={{fontSize:22}}> Module</span> */}
     </div>
+   
+    
 
     <div style={{width:"70%", height:"20%",marginTop:50, marginLeft:30, display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
     <User color="black" size={60} />
@@ -47,7 +52,9 @@ const HomeScreen = ()=>{
     </div>
 
     <div style={{width:"70%", height:"20%",marginTop:50, marginLeft:30 , display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
+    <Link to="/forth">
     <User color="black" size={60} />
+    </Link>
     <span style={{fontSize:22, paddingTop:5}}>Calender</span>
     <span style={{fontSize:22}}> Module</span>
     </div>

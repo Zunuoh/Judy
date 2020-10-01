@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 import Login from '../src/components/Login'
 import HomeScreen from '../src/components/HomeScreen';
@@ -20,9 +21,19 @@ import ChartScreen from '../src/components/Chart';
       // <HomeScreen/>
       // <PieScreen/>
       // <LineChart/>
-      <InvoiceScreen/>
+      // <InvoiceScreen/>
       // <CalendarScreen/>
       // <ChartScreen/>
+      <BrowserRouter>
+           <Switch>
+             <Route component={Login} path="/" exact/>
+             <Route component={HomeScreen} path="/second" exact/>
+             <Route component={InvoiceScreen} path="/third" exact/>
+             <Route component={CalendarScreen} path="/forth" exact/>
+
+           </Switch>
+      </BrowserRouter>
+
      
       )
     }
